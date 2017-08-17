@@ -1,0 +1,26 @@
+You hit the new page
+
+<%= form_for @user do |u| %>
+	<%= u.label :name %>
+	<%= u.text_field :name %>
+
+	<%= u.label :password %>
+	<%= u.password_field :password %>
+
+	<%= u.label :height %>
+	<%= u.number_field :height %>
+
+	<%= u.label :happiness %>
+	<%= u.number_field :happiness %>
+
+	<%= u.label :nausea %>
+	<%= u.number_field :nausea %>
+
+	<%= u.label :tickets %>
+	<%= u.number_field :tickets %>
+
+	<%= u.label :admin %>
+	<%= u.check_box :admin %>
+	
+	<p><%= u.submit %></p>
+<% end %>
