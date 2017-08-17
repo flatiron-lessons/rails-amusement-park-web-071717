@@ -1,0 +1,6 @@
+<h3><%= @attraction.name %></h3>
+<!-- < button_to "Go on this ride", Ride.new %> -->
+<%= form_for Ride.new do |r| %>
+	<%= r.hidden_field :attraction_id, value: params[:id] %>
+	<%= r.submit "Go on this ride" %>
+<% end %>

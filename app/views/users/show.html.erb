@@ -1,1 +1,14 @@
-congrats on hitting the show page
+<%= flash[:message] %>
+
+<p>Name: <%= @user.name %></p>
+<p>Mood: <%= @user.mood %></p>
+<p>Tickets: <%= @user.tickets %></p>
+<p>Height: <%= @user.height %></p>
+
+<% if @user.admin? %>
+	<p> ADMIN <P>
+<% end %>
+
+<%= link_to "See attractions", attractions_path %>
+
+<%= link_to "Log Out", logout_path %>

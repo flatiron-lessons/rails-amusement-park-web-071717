@@ -1,0 +1,12 @@
+<h3> Attractions </h3>
+
+
+<ul>
+<% @attractions.each do |a| %>
+	<li> <%= link_to "Go on #{a.name}", attraction_path(a) %> </li>
+	<% if logged_in? && current_user.admin %>
+		<button><%= link_to "Edit", edit_attraction_path(a) %></button>
+	<% end %>
+<% end %>
+</ul>
+
