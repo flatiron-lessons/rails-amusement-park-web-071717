@@ -1,1 +1,7 @@
-you hit the edit
+<% if logged_in? && current_user.admin %>
+	<%= form_for Attraction.find(params[:id]) do |a| %>
+		<%= a.label :name %>
+		<%= a.text_field :name %>
+		<%= a.submit %>
+	<% end %>
+<% end %>

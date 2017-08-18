@@ -1,0 +1,20 @@
+You hit the new page
+
+<%= form_for @attraction do |a| %>
+	<%= a.label :name %>
+	<%= a.text_field :name %>
+
+	<%= a.label :min_height %>
+	<%= a.number_field :min_height %>
+
+	<%= a.label :nausea_rating %>
+	<%= a.number_field :nausea_rating %>
+
+	<%= a.label :happiness_rating %>
+	<%= a.number_field :happiness_rating %>
+
+	<%= a.label :tickets %>
+	<%= a.number_field :tickets %>
+
+	<p><%= a.submit %></p>
+<% end %>
